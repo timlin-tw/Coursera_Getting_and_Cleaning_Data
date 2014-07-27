@@ -17,43 +17,43 @@ The reasoning behind my selection of features is that the assignment explicitly 
 In short, for this derived dataset, these signals were used to estimate variables of the feature vector for each pattern:
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
 
 ## Variables
 The set of variables that were estimated (and kept for this assignment) from these signals are:
-mean(): Mean value
-std(): Standard deviation
+* mean(): Mean value
+* std(): Standard deviation
 
 ## Transformed script for cleaning up the data
-* 1.Merges the training and the test sets to create one data set.
+* Merges the training and the test sets to create one data set.
 The analysis addresses the training and test data separately, first combining the feature vector with outcome variables and subject identifiers (e.g. X_train.txt, Y_train.txt, subject_train.txt), and then merges the training and test data into a single, larger dataset.
 
-* 2.Extracts only the measurements on the mean and standard deviation for each measurement. 
+* Extracts only the measurements on the mean and standard deviation for each measurement. 
 The analysis then subsets the data so that only mean and standard devation measurements from the original data are included. This includes all measurements identified by -mean() or -std() labels.
 
-* 3.Uses descriptive activity names to name the activities in the data set
+* Uses descriptive activity names to name the activities in the data set
 Merge data subset with the activityType table to cinlude the descriptive activity names
 
-* 4.Appropriately labels the data set with descriptive variable names. 
+* Appropriately labels the data set with descriptive variable names. 
 Replace the non-descriptive labels to clean up the data set
 
-* 5.Creates a second, independent tidy data set with the average of each variable for each activity and each subj
+* Creates a second, independent tidy data set with the average of each variable for each activity and each subj
 Merging the tidydt with activityLables again to get the activityType column and output the data set
 
 
